@@ -10,7 +10,7 @@
   right: 0;
   width: 100%;
   padding: 20px 100px;
-  background: pink;
+  /* background: pink; */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -50,20 +50,44 @@
   background: #fff;
   opacity: 0.85;
 }
+.section {
+  min-height: 100vh;
+  background: url(background1.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
 .wrapper {
   position: absolute;
   top: 0;
   right: 0;
   width: 450px;
   height: 100%;
-  background: yellowgreen;
+  background: transparent;
+  backdrop-filter: blur(15px);
+  /* background: yellowgreen; */
   z-index: 100;
   display: flex;
-  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  /* align-items: center; */
+  padding: 0 40px;
 }
 .wrapper .logreg-box {
   width: 100%;
   /* background: pink; */
+}
+.wrapper .form-box.login {
+  display: block;
+}
+.wrapper.active .form-box.login {
+  display: none;
+}
+
+.wrapper .form-box.registor {
+  display: none;
+}
+.wrapper.active .form-box.registor {
+  display: block;
 }
 .logreg-box .logreg-title {
   text-align: center;
@@ -167,4 +191,37 @@
 }
 .logreg-link p a:hover {
   text-decoration: underline;
+}
+.media-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.media-option a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+
+  width: 100%;
+  height: 50px;
+  /* background: red; */
+  border: 2px solid #fff;
+  margin: 10px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 45px;
+  color: #fff;
+  text-decoration: none;
+  transition: 0.5s;
+}
+.media-option a:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+.media-option a i {
+  font-size: 22px;
+  margin: 0 8px 1.5px 0;
+}
+.media-option a span {
+  font-size: 16px;
+  font-weight: 500;
 }
